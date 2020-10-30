@@ -68,7 +68,8 @@ namespace mvcWebApp.Controllers
                 _context.Add(product);
                 await _context.SaveChangesAsync();
             }
-            return View(product);
+            return RedirectToAction("Index", "Products");
+
         }
 
         // GET: Products/Edit/5
